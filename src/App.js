@@ -1,3 +1,5 @@
+import WorkCard from './components/WorkCard';
+import EraButton from './components/EraButton';
 import './App.css';
 
 function App() {
@@ -34,40 +36,17 @@ function App() {
         </div>
       </section>
       <section className='era-container'>
-        <div className='era-picture-container'>
-          <button className='era-button'><img/></button>
-          <button className='era-button'><img/></button>
-          <button className='era-button'><img/></button>
-          <button className='era-button'><img/></button>
-          <button className='era-button'><img/></button>
-        </div>
+        <EraButton/>
+        <EraButton/>
+        <EraButton/>
+        <EraButton/>
+        <EraButton/>
       </section>
       <section className='works-container'>
-        <div className='work-card'>
-          <h3>Title</h3>
-          <img/>
-          <p>Description</p>
-        </div>
-        <div className='work-card'>
-          <h3>Title</h3>
-          <img/>
-          <p>Description</p>
-        </div>
-        <div className='work-card'>
-          <h3>Title</h3>
-          <img/>
-          <p>Description</p>
-        </div>
-        <div className='work-card'>
-          <h3>Title</h3>
-          <img/>
-          <p>Description</p>
-        </div>
-        <div className='work-card'>
-          <h3>Title</h3>
-          <img/>
-          <p>Description</p>
-        </div>
+        <WorkCard title='teacher' description='teach something'/>
+        <WorkCard title='waiter' description='take orders'/>
+        <WorkCard title='police' description='keep peace'/>
+        <WorkCard title='doctor' description='save lifes'/>
       </section>
     </div>
   );

@@ -34,7 +34,13 @@ header > h1 {
 }
 
 .era-container {
-  padding: 30px 10px;
+  padding: 5px 10px;
+}
+
+.era-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .works-container {
@@ -42,6 +48,6 @@ header > h1 {
 }
 
 .work-card {
-  width: 18%;
+  width: 23%;
   background: seashell;
 }
