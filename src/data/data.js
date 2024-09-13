@@ -1,4 +1,4 @@
-const prehistory = [
+export const prehistory = [
   { 
     title: 'Gatherers',
     description: 'People who collected fruits, nuts, berries, roots, and other edible plants from their surroundings. They knew which plants were safe to eat and which were not, and they understood the seasons when different plants were available. Also, they provided a reliable source of food and was crucial for the survival of early human communities'
@@ -13,7 +13,7 @@ const prehistory = [
   }
 ];
 
-const ancientCivilizations = [
+export const ancientCivilizations = [
   { 
     title: 'Scribes',
     description: 'In civilizations like Egypt, Mesopotamia, and China, there were highly skilled individuals trained in the art of writing and maintaining detailed records. Their work involved documenting laws, religious texts, trade transactions, and significant historical events. Since few people possessed this skill, their role was crucial for administration, communication, and the preservation of knowledge, making them highly respected within their communities.'
@@ -32,7 +32,7 @@ const ancientCivilizations = [
   },
 ];
 
-const medieval = [
+export const medieval = [
   { 
     title: 'Blacksmith',
     description: 'These individuals were skilled in working with iron and steel to create various tools, weapons, armor, horseshoes, and household items. Their work was crucial for both everyday life and warfare. The craftsmanship required both physical strength and technical knowledge, making them highly valuable in both rural and urban settings.'
@@ -55,7 +55,7 @@ const medieval = [
   }
 ];
 
-const industrialRevolution = [
+export const industrialRevolution = [
   { 
     title: 'Mechanics',
     description: 'Factory workers were the backbone of the Industrial Revolution, operating machinery in factories that produced goods like textiles, iron, and steel. These workers, including men, women, and even children, often worked long hours in harsh conditions for low wages. The rise of factories marked a significant shift from traditional handcrafting to mass production, and factory workers became a central part of the new industrial economy. Their labor helped drive the rapid growth of industries and cities during this period.'
@@ -70,7 +70,7 @@ const industrialRevolution = [
   }
 ];
 
-const modernEra = [
+export const modernEra = [
   { 
     title: 'Software Developers',
     description: 'Software developers are essential in the modern era, creating the applications and systems that power our digital world. They design, write, and maintain code for various software, from mobile apps and web services to operating systems and video games. As technology has advanced, software development has become a critical field that drives innovation in almost every industry, including healthcare, finance, education, and entertainment. Software developers are central to the digital economy, enabling everything from communication and commerce to data analysis and automation.'

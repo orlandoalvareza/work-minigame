@@ -1,8 +1,19 @@
+import { useState } from 'react';
+
 import WorkCard from './components/WorkCard';
 import EraButton from './components/EraButton';
 import './App.css';
+import { prehistory } from './data/data';
 
 function App() {
+  const [era, setEra] = useState('');
+
+  const eraHandler = (era) => {
+    setEra(era);
+  }
+
+  console.log(era);
+
   return (
     <div className="work-app">
       <header>
@@ -36,17 +47,16 @@ function App() {
         </div>
       </section>
       <section className='era-container'>
-        <EraButton/>
-        <EraButton/>
-        <EraButton/>
-        <EraButton/>
-        <EraButton/>
+      <EraButton eraCode={0} onSetEra={eraHandler}/>
+      <EraButton eraCode={1} onSetEra={eraHandler}/>
+      <EraButton eraCode={2} onSetEra={eraHandler}/>
+      <EraButton eraCode={3} onSetEra={eraHandler}/>
+      <EraButton eraCode={4} onSetEra={eraHandler}/>
       </section>
       <section className='works-container'>
-        <WorkCard title='teacher' description='teach something'/>
-        <WorkCard title='waiter' description='take orders'/>
-        <WorkCard title='police' description='keep peace'/>
-        <WorkCard title='doctor' description='save lifes'/>
+        <WorkCard title={prehistory[0].title} description={prehistory[0].description} />
+        <WorkCard title={prehistory[1].title} description={prehistory[1].description} />
+        <WorkCard title={prehistory[2].title} description={prehistory[2].description} />
       </section>
     </div>
   );
