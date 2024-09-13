@@ -1,9 +1,17 @@
-const WorkCard = ({ title, description }) => {
+import './WorkCard.css';
+
+const WorkCard = (props) => {
   return (
     <div className='work-card'>
-      <h3>{title}</h3>
-      <img/>
-      <p>{description}</p>
+      {props.data.map((item, index) => {
+        return (
+          <div key={index}>
+            <h3>{item.title}</h3>
+            <img src="" alt={item.title} />
+            <p>{item.description}</p>
+          </div>
+        )
+      })}
     </div>
   )
 }

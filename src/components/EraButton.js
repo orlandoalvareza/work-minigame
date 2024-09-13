@@ -1,6 +1,5 @@
-import { useState } from "react";
-
 const EraButton = (props) => {
+  console.log(props);
   const selectedEraHandler = () => {
     if (props.eraCode === 0) {
       props.onSetEra('prehistory');

@@ -30,7 +30,7 @@ header > h1 {
 }
 
 .time-line-container {
-  padding: 55px 10px;
+  padding: 25px 10px;
 }
 
 .era-container {
@@ -44,10 +44,16 @@ header > h1 {
 }
 
 .works-container {
-  padding: 10px 10px;
+  height: 300px;
 }
 
 .work-card {
-  width: 23%;
+  display: flex;
+  gap: 50px;
+  height: 100%;
   background: seashell;
+}
+
+.work-card p {
+  background: skyblue;
 }
