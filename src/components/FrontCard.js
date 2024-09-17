@@ -3,7 +3,7 @@ import { Box, Button, TextField, Typography } from '@mui/material';
 
 import './FrontCard.css';
 
-const FrontCard = ({ description, onSubmit }) => {
+const FrontCard = ({ title, description, onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState(false);
 
@@ -13,9 +13,9 @@ const FrontCard = ({ description, onSubmit }) => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    if (inputValue.toLowerCase() === 'correct') {
-      onSubmit();
+    event.preventDefault();    
+    if (inputValue.toLowerCase() === title.toLowerCase()) {
+      onSubmit(title.toLowerCase());
     } else {
       setError(true);
     }

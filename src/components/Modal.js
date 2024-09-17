@@ -1,21 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Box, Fade, Backdrop } from '@mui/material';
 import FrontCard from './FrontCard';
 import BackCard from './BackCard';
 
 import './Modal.css';
 
-const TransitionsModal = ({ open, onClose, title, description }) => {
+const TransitionsModal = ({ open, onClose, title, description, onCorrectCards, classifiedCards }) => {
   const [flipped, setFlipped] = useState(false);
 
-  const handleFlip = () => {
+  const handleFlip = (cardTitle) => {
+    onCorrectCards(cardTitle);
     setFlipped(true);
   };
+
+  const isClassified = classifiedCards.includes(title.toLowerCase());
+  console.log('classifiedCards', classifiedCards);
+
+  // useEffect(() => {
+  //   if (isClassified) {
+  //     setFlipped(true);
+  //   }
+  // }, [isClassified]);
+
+  useEffect(() => {
+    if (open) {
+      setFlipped(isClassified);
+    }
+  }, [open, title, isClassified]);
 
   return (
     <Modal
       open={open}
-      onClose={onClose}
+      onClose={() => {
+        setFlipped(isClassified);
+        onClose();
+      }}
       closeAfterTransition
       slots={{ backdrop: Backdrop }}
       slotProps={{ backdrop: { timeout: 500 } }}
