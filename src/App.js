@@ -4,6 +4,13 @@ import WorkCard from './components/WorkCard';
 import EraButton from './components/EraButton';
 import { ancientCivilizations, industrialRevolution, medieval, modernEra, prehistory } from './data/data';
 import TransitionsModal from './components/Modal';
+
+import prehistoryImg from './images/prehistory/prehistory.webp';
+import ancientCivilizationsImg from './images/ancient/ancient-civilizations.webp';
+import medievalImg from './images/medieval/medieval.webp';
+import industrialRevImg from './images/industrial/industrial-revolution.webp';
+import modernImg from './images/modern/modern-era.webp';
+
 import './App.css';
 
 function App() {
@@ -28,10 +35,6 @@ function App() {
   const correctCardsHandler = (cardTitle) => {
     setCorrectCards([...correctCards, cardTitle]);
   };
-
-  // const correctCardStyleHandler = (cardTitle) => {
-  //   return correctCards.includes(cardTitle) ? { color: 'red' } : {};
-  // };
 
   const modal = selectedCard.title && selectedCard.description ? (
     <TransitionsModal
@@ -79,11 +82,11 @@ function App() {
       </section>
       <section className='works-section'>
         <div className='era-container'>
-          <EraButton eraCode={0} onSetEra={eraHandler}/>
-          <EraButton eraCode={1} onSetEra={eraHandler}/>
-          <EraButton eraCode={2} onSetEra={eraHandler}/>
-          <EraButton eraCode={3} onSetEra={eraHandler}/>
-          <EraButton eraCode={4} onSetEra={eraHandler}/>
+          <EraButton eraCode={0} onSetEra={eraHandler} image={prehistoryImg}/>
+          <EraButton eraCode={1} onSetEra={eraHandler} image={ancientCivilizationsImg}/>
+          <EraButton eraCode={2} onSetEra={eraHandler} image={medievalImg}/>
+          <EraButton eraCode={3} onSetEra={eraHandler} image={industrialRevImg}/>
+          <EraButton eraCode={4} onSetEra={eraHandler} image={modernImg}/>
         </div>
         <div className='works-container'>
           {era === 'prehistory' && (

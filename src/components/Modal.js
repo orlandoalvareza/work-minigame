@@ -14,13 +14,6 @@ const TransitionsModal = ({ open, onClose, title, description, onCorrectCards, c
   };
 
   const isClassified = classifiedCards.includes(title.toLowerCase());
-  console.log('classifiedCards', classifiedCards);
-
-  // useEffect(() => {
-  //   if (isClassified) {
-  //     setFlipped(true);
-  //   }
-  // }, [isClassified]);
 
   useEffect(() => {
     if (open) {
