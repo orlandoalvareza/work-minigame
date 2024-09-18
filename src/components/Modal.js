@@ -5,7 +5,7 @@ import BackCard from './BackCard';
 
 import './Modal.css';
 
-const TransitionsModal = ({ open, onClose, title, description, onCorrectCards, classifiedCards }) => {
+const TransitionsModal = ({ open, onClose, title, img, description, onCorrectCards, classifiedCards }) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleFlip = (cardTitle) => {
@@ -38,7 +38,7 @@ const TransitionsModal = ({ open, onClose, title, description, onCorrectCards, c
             className={`flip-card-inner ${flipped ? 'flipped' : ''}`}
           >
             <FrontCard title={title} description={description} onSubmit={handleFlip} />
-            <BackCard title={title} />
+            <BackCard title={title} img={img}/>
           </Box>
         </Box>
       </Fade>

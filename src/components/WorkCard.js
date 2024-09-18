@@ -1,3 +1,7 @@
+import questionCard from '../images/question-card.jpg';
+
+import './WorkCard.css';
+
 const WorkCard = (props) => {
   return (
     <div className='work-card'>
@@ -7,17 +11,12 @@ const WorkCard = (props) => {
         return (
           <div key={index} id={item.title} onClick={() => props.onSetCard(item)} className="card">
             {isClassified ? (
-              <>
+              <div className='classified-card'>
                 <h3>{item.title}</h3>
-                <p>Esta carta ha sido clasificada correctamente</p>
-              </>
-            ) : (
-              <>
-                <h3>{item.title}</h3>
-                <img src={item.image || 'default-image-url'} alt={item.title} />
                 <p>{item.description}</p>
-              </>
-            )}
+              </div>
+            ) : <img className='question-card' src={questionCard} alt='question-card'/>
+            }
           </div>
       )})}
     </div>

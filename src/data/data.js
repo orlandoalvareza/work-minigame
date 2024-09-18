@@ -32,12 +32,12 @@ export const prehistory = [
   { 
     title: 'Hunter',
     image: hunterImg,
-    description: 'They played a crucial role in securing food by tracking and taking down animals. Using simple tools like spears, bows, and arrows, they targeted creatures such as deer, mammoths, and wild boars. This activity demanded skill, strength, and collaboration, providing not only nourishment but also materials like bones for tools and fur for clothing. It was vital for the survival of early humans, especially in harsh environments where plant-based food was limited.'
+    description: 'They played a crucial role in securing food by tracking and taking down animals. Using simple tools like spears, bows, and arrows, they targeted creatures such as deer, mammoths, and wild boars. This activity demanded skill, strength, and collaboration, providing not only nourishment but also materials like bones for tools and fur for clothing.'
   },
   { 
     title: 'Agriculturalist',
     image: agriculturalistImg,
-    description: 'They were among the first to work with nature by planting and cultivating crops like wheat, barley, and legumes. This shift from merely gathering to producing food allowed human communities to settle in one place rather than constantly moving in search of sustenance. The ability to manage their own resources enabled early humans to secure stable food supplies, leading to the growth of permanent settlements.'
+    description: 'They were among the first to work with nature by planting and cultivating crops like wheat, barley, and legumes. This shift from merely gathering to producing food allowed human communities to settle in one place rather than constantly moving in search of sustenance. The ability to manage their own resources enabled early humans to secure stable food supplies.'
   },
   { 
     title: 'Healer',
@@ -65,7 +65,7 @@ export const ancientCivilizations = [
   { 
     title: 'Farmers',
     image: farmerImg,
-    description: 'In ancient societies, certain people were responsible for cultivating the land to produce essential food supplies that sustained the population. They grew crops such as wheat, barley, rice, and maize, and domesticated animals for meat, milk, and labor, depending on the region. The surplus they produced enabled the growth of cities, supported specialized trades, and allowed for social and political development, serving as a foundation for the organization of societies.'
+    description: 'In ancient societies, certain people were responsible for cultivating the land to produce essential food supplies that sustained the population. They grew crops such as wheat, barley, rice, and maize, and domesticated animals for meat, milk, and labor, depending on the region.'
   },
 ];
 
@@ -88,7 +88,7 @@ export const medieval = [
   { 
     title: 'Cartographer',
     image: cartographerImg,
-    description: 'Individuals who specialized in creating maps and charts for navigation, exploration, and territorial management. Their work was crucial for traders, explorers, and military leaders, providing detailed depictions of geographical areas, trade routes, and political boundaries. Given the lack of precise tools, this profession required a combination of art, science, and knowledge of mathematics and geography, making them highly valued for expanding knowledge of the world.'
+    description: 'Individuals who specialized in creating maps and charts for navigation, exploration, and territorial management. Their work was crucial for traders, explorers, and military leaders, providing detailed depictions of geographical areas, trade routes, and political boundaries.'
   }
 ];
 
@@ -96,17 +96,17 @@ export const industrialRevolution = [
   { 
     title: 'Mechanic',
     image: mechanic,
-    description: 'Factory workers were the backbone of the Industrial Revolution, operating machinery in factories that produced goods like textiles, iron, and steel. These workers, including men, women, and even children, often worked long hours in harsh conditions for low wages. The rise of factories marked a significant shift from traditional handcrafting to mass production, and factory workers became a central part of the new industrial economy. Their labor helped drive the rapid growth of industries and cities during this period.'
+    description: 'Factory workers were the backbone of the Industrial Revolution, operating machinery in factories that produced goods like textiles, iron, and steel. These workers, including men, women, and even children, often worked long hours in harsh conditions for low wages. Their labor helped drive the rapid growth of industries and cities during this period.'
   },
   { 
     title: 'Engineers',
     image: engineerImg,
-    description: 'They were crucial figures during the Industrial Revolution, responsible for designing, building, and improving machines, tools, and infrastructure. Mechanical, civil, and electrical engineers worked on developing steam engines, railways, bridges, and other innovations that powered industrial growth. Engineers like James Watt and George Stephenson made significant contributions that revolutionized transportation and manufacturing. Their work laid the foundation for modern engineering and played a key role in shaping the technological landscape of the 19th century.'
+    description: 'They were crucial figures during the Industrial Revolution, responsible for designing, building, and improving machines, tools, and infrastructure. Mechanical, civil, and electrical engineers worked on developing steam engines, railways, bridges, and other innovations that powered industrial growth.'
   },
   { 
     title: 'Miners',
     image: minerImg,
-    description: 'They were essential workers who extracted coal, iron ore, and other raw materials needed to fuel factories, steam engines, and the overall industrial machinery. Coal mining, in particular, was dangerous and physically demanding work that took place deep underground. Miners faced numerous hazards, such as cave-ins, explosions, and health issues like lung diseases. Despite the risks, mining was a crucial occupation that supported the energy needs of the rapidly expanding industrial economy and powered the development of new technologies and transportation systems.'
+    description: 'They were essential workers who extracted coal, iron ore, and other raw materials needed to fuel factories, steam engines, and the overall industrial machinery. Coal mining, in particular, was dangerous and physically demanding work that took place deep underground. They faced numerous hazards, such as cave-ins, explosions, and health issues like lung diseases.'
   },
   {
     title: 'Printer',
@@ -119,7 +119,7 @@ export const modernEra = [
   { 
     title: 'Software Developers',
     image: developerImg,
-    description: 'They are essential in the modern era, creating the applications and systems that power our digital world. They design, write, and maintain code for various software, from mobile apps and web services to operating systems and video games. As technology has advanced, they has become a critical field that drives innovation in almost every industry, including healthcare, finance, education, and entertainment.'
+    description: 'They are essential in the modern era, creating the applications and systems that power our digital world. They design, write, and maintain code for various software, from mobile apps and web services to operating systems and video games. They has become a critical field that drives innovation in almost every industry, including healthcare, finance, education, and entertainment.'
   },  
   { 
     title: 'Electrician',

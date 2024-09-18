@@ -41,6 +41,7 @@ function App() {
       open={open}
       onClose={handleClose}
       title={selectedCard.title}
+      img={selectedCard.image}
       description={selectedCard.description}
       onCorrectCards={correctCardsHandler}
       classifiedCards={correctCards}

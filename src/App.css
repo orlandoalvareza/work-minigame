@@ -34,7 +34,13 @@ header > h1 {
 }
 
 .era-container {
-  padding: 5px 0;
+  padding: 5px;
+}
+
+.era-button {
+  cursor: pointer;
+  background: transparent;
+  padding: 5px 15px;
 }
 
 .era-image {
@@ -45,15 +51,24 @@ header > h1 {
 
 .works-container {
   height: 300px;
+  background: black;
 }
 
 .work-card {
   display: flex;
-  gap: 50px;
-  height: 100%;
+  justify-content: space-between;
   background: seashell;
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 .work-card p {
-  background: skyblue;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 10px 0;
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
 }

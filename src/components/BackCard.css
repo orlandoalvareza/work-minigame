@@ -6,14 +6,27 @@
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: lightgray;
-  padding: 16px;
   border-radius: 8px;
 }
 
+.back-card > h2 {
+  font-size: 26px;
+  font-weight: 700;
+  background: transparent;
+  width: 100%;
+  text-align: right;
+  padding: 0 20px;
+  z-index: 10;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
 .job-image {
-  width: 100px;
-  height: 100px;
+  position: relative;
+  top: -55px;
+  width: 450px;
+  height: 355px;
 }
