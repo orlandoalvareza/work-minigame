@@ -5,6 +5,7 @@ import EraButton from './components/EraButton';
 import { ancientCivilizations, industrialRevolution, medieval, modernEra, prehistory } from './data/data';
 import TransitionsModal from './components/Modal';
 
+import heroImg from './images/work-hero.jpg';
 import prehistoryImg from './images/prehistory/prehistory.webp';
 import ancientCivilizationsImg from './images/ancient/ancient-civilizations.webp';
 import medievalImg from './images/medieval/medieval.webp';
@@ -12,6 +13,7 @@ import industrialRevImg from './images/industrial/industrial-revolution.webp';
 import modernImg from './images/modern/modern-era.webp';
 
 import './App.css';
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   const [era, setEra] = useState('');
@@ -52,42 +54,16 @@ function App() {
     <div className="work-app">
       <header>
         <h1>Work Through The Ages</h1>
-        {selectedCard !== '' && modal}
+        <img src={heroImg} alt='jobs-image' className='hero-image'/>
       </header>
-      <section className='time-line-container'>
-        <div className='time-line-section'>
-          <h2 className='time-age'>Prehistoric</h2>
-          <div className='time-scale'></div>
-          <span>1900's</span>
-        </div>
-        <div className='time-line-section'>
-          <h2 className='time-age'>Prehistoric</h2>
-          <div className='time-scale'></div>
-          <span>1900's</span>
-        </div>
-        <div className='time-line-section'>
-          <h2 className='time-age'>Prehistoric</h2>
-          <div className='time-scale'></div>
-          <span>1900's</span>
-        </div>
-        <div className='time-line-section'>
-          <h2 className='time-age'>Prehistoric</h2>
-          <div className='time-scale'></div>
-          <span>1900's</span>
-        </div>
-        <div className='time-line-section'>
-          <h2 className='time-age'>Prehistoric</h2>
-          <div className='time-scale'></div>
-          <span>1900's</span>
-        </div>
-      </section>
+      <ProgressBar correctCards={correctCards}/>
       <section className='works-section'>
         <div className='era-container'>
-          <EraButton eraCode={0} onSetEra={eraHandler} image={prehistoryImg}/>
-          <EraButton eraCode={1} onSetEra={eraHandler} image={ancientCivilizationsImg}/>
-          <EraButton eraCode={2} onSetEra={eraHandler} image={medievalImg}/>
-          <EraButton eraCode={3} onSetEra={eraHandler} image={industrialRevImg}/>
-          <EraButton eraCode={4} onSetEra={eraHandler} image={modernImg}/>
+          <EraButton title={'Prehistory'} eraCode={0} onSetEra={eraHandler} image={prehistoryImg} isActive={era === 'prehistory'}/>
+          <EraButton title={'Ancient Civilizations'} eraCode={1} onSetEra={eraHandler} image={ancientCivilizationsImg} isActive={era === 'ancientCivilizations'}/>
+          <EraButton title={'Medieval'} eraCode={2} onSetEra={eraHandler} image={medievalImg} isActive={era === 'medieval'}/>
+          <EraButton title={'Industrial Revolution'} eraCode={3} onSetEra={eraHandler} image={industrialRevImg} isActive={era === 'industrialRevolution'}/>
+          <EraButton title={'Modern Era'} eraCode={4} onSetEra={eraHandler} image={modernImg} isActive={era === 'modernEra'}/>
         </div>
         <div className='works-container'>
           {era === 'prehistory' && (
@@ -122,6 +98,7 @@ function App() {
           )}
         </div>
       </section>
+      {selectedCard !== '' && modal}
     </div>
   );
 }

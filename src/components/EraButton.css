@@ -1,0 +1,35 @@
+.era-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  width: 20%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.4s ease;
+}
+
+.era-button.active {
+  background-color: lightblue;
+}
+
+.title-container {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.title-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.active-title {
+  font-size: 1.2rem;
+  text-align: center;
+  white-space: pre-wrap;
+}

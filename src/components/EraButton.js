@@ -1,3 +1,5 @@
+import './EraButton.css';
+
 const EraButton = (props) => {
   const selectedEraHandler = () => {
     if (props.eraCode === 0) {
@@ -14,14 +16,20 @@ const EraButton = (props) => {
   };
 
   return (
-    <button className='era-button' onClick={selectedEraHandler}>
+    <button
+      className={`era-button ${props.isActive ? 'active' : ''}`}
+      onClick={selectedEraHandler}
+    >
       <img 
         className="era-image"
         src={props.image}
         alt="era-image"
       />
+      <span className={`title-container ${props.isActive ? 'visible' : ''}`}>
+        <h3 className="active-title">{props.title}</h3>
+      </span>
     </button>
-  )
+  );
 }
 
 export default EraButton;

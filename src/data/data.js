@@ -37,12 +37,12 @@ export const prehistory = [
   { 
     title: 'Agriculturalist',
     image: agriculturalistImg,
-    description: 'They were among the first to work with nature by planting and cultivating crops like wheat, barley, and legumes. This shift from merely gathering to producing food allowed human communities to settle in one place rather than constantly moving in search of sustenance. The ability to manage their own resources enabled early humans to secure stable food supplies.'
+    description: 'They were among the first to work with nature by planting and cultivating crops like wheat, barley, and legumes. This shift from merely gathering to producing food allowed human communities to settle in one place rather than constantly moving in search of sustenance.'
   },
   { 
     title: 'Healer',
     image: healerImg,
-    description: 'In prehistoric times, there was a key figure in society responsible for the health and well-being of the tribe. This person had extensive knowledge of plants, roots, and herbs, using them to treat wounds and illnesses. They also believed that many physical ailments had spiritual causes, so they performed rituals, chants, and used protective objects to drive away harmful forces or spirits.'
+    description: 'In prehistoric times, there was a key figure in society responsible for the health and well-being of the tribe. This person had extensive knowledge of plants, roots, and herbs, using them to treat wounds and illnesses. They also believed that many physical ailments had spiritual causes, so they performed rituals and used objects to drive away harmful forces or spirits.'
   }
 ];
 
