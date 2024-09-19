@@ -63,7 +63,7 @@ export const ancientCivilizations = [
     description: 'Facilitating trade across vast regions, these individuals connected cities and empires, exchanging goods like grain, textiles, spices, and precious metals. Their journeys across land and sea promoted not only commerce but also cultural exchange, expanding the wealth and diversity of ancient societies.'
   },
   { 
-    title: 'Farmers',
+    title: 'Farmer',
     image: farmerImg,
     description: 'In ancient societies, certain people were responsible for cultivating the land to produce essential food supplies that sustained the population. They grew crops such as wheat, barley, rice, and maize, and domesticated animals for meat, milk, and labor, depending on the region.'
   },
@@ -99,12 +99,12 @@ export const industrialRevolution = [
     description: 'Factory workers were the backbone of the Industrial Revolution, operating machinery in factories that produced goods like textiles, iron, and steel. These workers, including men, women, and even children, often worked long hours in harsh conditions for low wages. Their labor helped drive the rapid growth of industries and cities during this period.'
   },
   { 
-    title: 'Engineers',
+    title: 'Engineer',
     image: engineerImg,
     description: 'They were crucial figures during the Industrial Revolution, responsible for designing, building, and improving machines, tools, and infrastructure. Mechanical, civil, and electrical engineers worked on developing steam engines, railways, bridges, and other innovations that powered industrial growth.'
   },
   { 
-    title: 'Miners',
+    title: 'Miner',
     image: minerImg,
     description: 'They were essential workers who extracted coal, iron ore, and other raw materials needed to fuel factories, steam engines, and the overall industrial machinery. Coal mining, in particular, was dangerous and physically demanding work that took place deep underground. They faced numerous hazards, such as cave-ins, explosions, and health issues like lung diseases.'
   },
@@ -117,7 +117,7 @@ export const industrialRevolution = [
 
 export const modernEra = [
   { 
-    title: 'Software Developers',
+    title: 'Software Developer',
     image: developerImg,
     description: 'They are essential in the modern era, creating the applications and systems that power our digital world. They design, write, and maintain code for various software, from mobile apps and web services to operating systems and video games. They has become a critical field that drives innovation in almost every industry, including healthcare, finance, education, and entertainment.'
   },  

@@ -19,34 +19,26 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--theme-third-color);
   height: 100vh;
   width: 100%;
-  padding: 10px;
+  background: var(--theme-third-color);
 }
 
 header {
-  position: relative;
-  height: 200px;
   display: flex;
   justify-content: center;
+  background: url('images/work-hero.jpg');
+  background-size: 55%;
+  background-position: top;
+  height: 400px;
 }
 
 header > h1 {
   font-family: 'Courier New', Courier;
   font-size: 2.8rem;
   color: var(--theme-sixth-color);
-  padding: 15px;
+  padding: 30px;
   text-align: center;
-  z-index: 1;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 200px;
-  z-index: 0;
 }
 
 .era-container, .works-container {
