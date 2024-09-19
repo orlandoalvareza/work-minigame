@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: aliceblue;
+  background-color: var(--theme-first-color);
   padding: 16px;
   border-radius: 8px;
 }
@@ -15,4 +15,8 @@
 .form-box {
   width: 100%;
   text-align: center;
+}
+
+.front-card  > p {
+  color: var(--theme-sixth-color);
 }

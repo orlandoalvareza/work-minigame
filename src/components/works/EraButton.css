@@ -4,17 +4,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  background-color: var(--theme-third-color);
   width: 20%;
   border: none;
   padding: 10px;
   cursor: pointer;
   overflow: hidden;
-  transition: background-color 0.4s ease;
+  border: 1px solid var(--theme-fifth-color);
+  /* transition: background-color 0.4s ease; */
+}
+
+.era-button:hover {
+  background: var(--theme-fourth-color);
+  border: 1px solid var(--theme-sixth-color);
 }
 
 .era-button.active {
-  background-color: lightblue;
+  color: var(--theme-first-color);
+  background-color: var(--theme-fifth-color);
+}
+
+.era-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .title-container {
@@ -29,6 +43,7 @@
 }
 
 .active-title {
+  font-family: 'Trebuchet MS', sans-serif;
   font-size: 1.2rem;
   text-align: center;
   white-space: pre-wrap;

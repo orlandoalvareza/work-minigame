@@ -1,3 +1,12 @@
+:root {
+  --theme-first-color: #F7F6F2;
+  --theme-second-color: #C8C6C6;
+  --theme-third-color: #F0E5CF;
+  --theme-fourth-color: #ece0d4;
+  --theme-fifth-color: #4B6587;
+  --theme-sixth-color: #102C57;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: burlywood;
+  background: var(--theme-third-color);
   height: 100vh;
   width: 100%;
   padding: 10px;
@@ -24,8 +33,10 @@ header {
 }
 
 header > h1 {
+  font-family: 'Courier New', Courier;
   font-size: 2.8rem;
-  padding: 20px;
+  color: var(--theme-sixth-color);
+  padding: 15px;
   text-align: center;
   z-index: 1;
 }
@@ -47,44 +58,6 @@ header > h1 {
   background: seashell;
 }
 
-
-.era-button {
-  cursor: pointer;
-  background: transparent;
-  background: seashell;
-  border: 1px solid transparent;
-}
-
-.era-button:hover {
-  border: 1px solid black;
-}
-
-.era-image {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
 .works-container {
   height: 310px;
-}
-
-.work-card {
-  display: flex;
-  justify-content: space-between;
-  background: lightblue;
-  height: 100%;
-  width: 100%;
-  padding: 10px 20px;
-}
-
-.work-card p {
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 10px 0;
-  height: 100%;
-  border-radius: 6px;
-  cursor: pointer;
-  overflow: hidden;
 }

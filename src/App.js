@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
-import WorkCard from './components/WorkCard';
-import EraButton from './components/EraButton';
+import WorkCard from './components/works/WorkCard';
+import EraButton from './components/works/EraButton';
+import TransitionsModal from './components/modal/Modal';
+import ProgressBar from './components/ProgressBar';
+
 import { ancientCivilizations, industrialRevolution, medieval, modernEra, prehistory } from './data/data';
-import TransitionsModal from './components/Modal';
 
 import heroImg from './images/work-hero.jpg';
 import prehistoryImg from './images/prehistory/prehistory.webp';
@@ -13,15 +15,12 @@ import industrialRevImg from './images/industrial/industrial-revolution.webp';
 import modernImg from './images/modern/modern-era.webp';
 
 import './App.css';
-import ProgressBar from './components/ProgressBar';
 
 function App() {
   const [era, setEra] = useState('');
-  const [open, setOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedCard, setSelectedCard] = useState({ title: '', description: '' });
   const [correctCards, setCorrectCards] = useState([]);
-
-  console.log('correctCards', correctCards);
   
   const eraHandler = (era) => {
     setEra(era);
@@ -29,10 +28,10 @@ function App() {
   
   const selectedCardHandler = (cardTitle) => {
     setSelectedCard(cardTitle);
-    setOpen(true);  
+    setIsOpen(true);  
   }
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => setIsOpen(false);
 
   const correctCardsHandler = (cardTitle) => {
     setCorrectCards([...correctCards, cardTitle]);
@@ -40,7 +39,7 @@ function App() {
 
   const modal = selectedCard.title && selectedCard.description ? (
     <TransitionsModal
-      open={open}
+      open={isOpen}
       onClose={handleClose}
       title={selectedCard.title}
       img={selectedCard.image}
@@ -50,6 +49,80 @@ function App() {
     />
   ) : null;
 
+  const eraContainer = (
+    <div className='era-container'>
+      <EraButton 
+        title={'Prehistory'} 
+        eraCode={0} 
+        onSetEra={eraHandler} 
+        image={prehistoryImg} 
+        isActive={era === 'prehistory'}
+      />
+      <EraButton 
+        title={'Ancient Civilizations'} 
+        eraCode={1} 
+        onSetEra={eraHandler} 
+        image={ancientCivilizationsImg} 
+        isActive={era === 'ancientCivilizations'}
+      />
+      <EraButton 
+        title={'Medieval'} 
+        eraCode={2} 
+        onSetEra={eraHandler} 
+        image={medievalImg} 
+        isActive={era === 'medieval'}
+      />
+      <EraButton 
+        title={'Industrial Revolution'} 
+        eraCode={3} onSetEra={eraHandler} 
+        image={industrialRevImg} 
+        isActive={era === 'industrialRevolution'}
+      />
+      <EraButton 
+        title={'Modern Era'} 
+        eraCode={4} 
+        onSetEra={eraHandler} 
+        image={modernImg} 
+        isActive={era === 'modernEra'}
+      />
+    </div>
+  )
+
+  const worksContainer = (
+    <div className='works-container'>
+      {era === 'prehistory' && (
+        <WorkCard data={prehistory} 
+        onSetCard={selectedCardHandler}
+        classifiedTitles={correctCards}
+        />
+      )}
+      {era === 'ancientCivilizations' && (
+        <WorkCard data={ancientCivilizations}  
+        onSetCard={selectedCardHandler}
+        classifiedTitles={correctCards}
+        />
+      )}
+      {era === 'medieval' && (
+        <WorkCard data={medieval} 
+        onSetCard={selectedCardHandler}
+        classifiedTitles={correctCards}
+        />
+      )}
+      {era === 'industrialRevolution' && (
+        <WorkCard data={industrialRevolution}  
+        onSetCard={selectedCardHandler}
+        classifiedTitles={correctCards}
+        />
+      )}
+      {era === 'modernEra' && (
+        <WorkCard data={modernEra} 
+        onSetCard={selectedCardHandler}
+        classifiedTitles={correctCards}
+        />
+      )}
+    </div>
+  )
+
   return (
     <div className="work-app">
       <header>
@@ -58,45 +131,8 @@ function App() {
       </header>
       <ProgressBar correctCards={correctCards}/>
       <section className='works-section'>
-        <div className='era-container'>
-          <EraButton title={'Prehistory'} eraCode={0} onSetEra={eraHandler} image={prehistoryImg} isActive={era === 'prehistory'}/>
-          <EraButton title={'Ancient Civilizations'} eraCode={1} onSetEra={eraHandler} image={ancientCivilizationsImg} isActive={era === 'ancientCivilizations'}/>
-          <EraButton title={'Medieval'} eraCode={2} onSetEra={eraHandler} image={medievalImg} isActive={era === 'medieval'}/>
-          <EraButton title={'Industrial Revolution'} eraCode={3} onSetEra={eraHandler} image={industrialRevImg} isActive={era === 'industrialRevolution'}/>
-          <EraButton title={'Modern Era'} eraCode={4} onSetEra={eraHandler} image={modernImg} isActive={era === 'modernEra'}/>
-        </div>
-        <div className='works-container'>
-          {era === 'prehistory' && (
-            <WorkCard data={prehistory} 
-            onSetCard={selectedCardHandler}
-            classifiedTitles={correctCards}
-            />
-          )}
-          {era === 'ancientCivilizations' && (
-            <WorkCard data={ancientCivilizations}  
-            onSetCard={selectedCardHandler}
-            classifiedTitles={correctCards}
-            />
-          )}
-          {era === 'medieval' && (
-            <WorkCard data={medieval} 
-            onSetCard={selectedCardHandler}
-            classifiedTitles={correctCards}
-            />
-          )}
-          {era === 'industrialRevolution' && (
-            <WorkCard data={industrialRevolution}  
-            onSetCard={selectedCardHandler}
-            classifiedTitles={correctCards}
-            />
-          )}
-          {era === 'modernEra' && (
-            <WorkCard data={modernEra} 
-            onSetCard={selectedCardHandler}
-            classifiedTitles={correctCards}
-            />
-          )}
-        </div>
+        {eraContainer}
+        {worksContainer}
       </section>
       {selectedCard !== '' && modal}
     </div>

@@ -1,4 +1,4 @@
-import questionCard from '../images/question-card.jpg';
+import questionCard from '../../images/question-card.jpg';
 
 import './WorkCard.css';
 
